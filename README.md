@@ -7,7 +7,7 @@ it works, and what happens when it is wrong?
 
 ## What I build
 
-- **A fleet of ~20 production MCP servers** over the systems an MSP actually
+- **A fleet of ~16 production MCP servers** over the systems an MSP actually
   runs: the carrier voice switch, RMM, O365 audit logs, virtualization,
   documentation. Entra-authenticated, containerized, telemetry on every tool.
 - **[mcp-telemetry-kit](https://github.com/JohnGilligan2/mcp-telemetry-kit)**:
@@ -19,6 +19,11 @@ it works, and what happens when it is wrong?
   a golden set built from operational outcomes (not model opinion) measures
   recall and precision separately, because a missed outage and a noisy alert
   do not cost the same.
+- **[snapshot-drift](https://github.com/JohnGilligan2/snapshot-drift)** and
+  **[selfhosted-claude-code](https://github.com/JohnGilligan2/selfhosted-claude-code)**:
+  a deterministic config-drift differ whose alert set was tuned by measurement
+  (1,247 real snapshot pairs, 4 findings), and a self-hosted runner fleet that
+  executes cloud agent sessions on our own infrastructure, outbound-only.
 - **Tenancy boundaries as code**: the customer-facing connector pattern where
   every read passes through one scope module with its own leak-test suite.
   Written up [on the blog](https://johngilligan2.github.io/).
